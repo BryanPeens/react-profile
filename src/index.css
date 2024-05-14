@@ -54,6 +54,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.bg{
+  /* width: 100%; */
+  /* height:auto; */
+  min-height:100vh;
+  background-image:url(./images/forestBG.jpg);
+  background-size: 100% 100%;
+  background-position: top center;
+}
+
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
