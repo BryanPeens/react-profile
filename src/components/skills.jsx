@@ -11,7 +11,7 @@ import AWS from '../assets/images/aws.png';
 
 const Skills = () => {
   return (
-    <div name='skills' className='w-[60%] mx-auto flex items-center justify-center'>
+    <div name='skills' className='w-[98%] flex items-center justify-center'>
       <Container className='max-w-screen-xl mx-auto p-4'>
         <Row className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
           <Col className='shadow-md hover:scale-110 duration-500 p-2'>
