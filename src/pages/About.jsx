@@ -36,7 +36,7 @@ export default function About() {
                 I was a student of Belgium Campus ITVersity, where I learned the fundamentals of front-end and back-end web development.<br/>
                 I have had the opportunity to work with both small and large cross-functional teams and have developed a working style that leans towards flexibility, colaboration and continious learning.<br/>
 
-                I'm currently looking for a new developer role. Hire me?<br/>
+                I'm currently looking for a new developer role.<br/>
 
               </p>
             </div>
