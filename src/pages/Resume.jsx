@@ -15,7 +15,7 @@ export default function Resume() {
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto font-semibold text-lg text-white">1</div>
             </div>
-            <div className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-gray-800 text-xl">PROFILE</h3>
               <p className="text-sm leading-snug tracking-wide text-gray-900 opacity-100">
                 Enthusiastic front-end developer with a strong work ethic and
@@ -33,7 +33,7 @@ export default function Resume() {
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto text-white font-semibold text-lg">2</div>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">HIGHLIGHTS</h3>
 
               <p className="text-sm font-medium leading-snug tracking-wide text-white opacity-100">
@@ -54,7 +54,7 @@ export default function Resume() {
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto font-semibold text-lg text-white">3</div>
             </div>
-            <div className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-gray-800 text-xl">
                 Junior Software Engineer EPI-USE Advance, Pretoria 2021-2022
               </h3>
@@ -80,7 +80,7 @@ export default function Resume() {
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto text-white font-semibold text-lg">4</div>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 Software Developer Eclipse Technologies, Alberton 2019-2020
               </h3>
@@ -106,7 +106,7 @@ export default function Resume() {
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto font-semibold text-lg text-white">5</div>
             </div>
-            <div className="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-800 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-gray-800 text-xl">
                 Technologies I Know
               </h3>
@@ -166,7 +166,7 @@ export default function Resume() {
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto text-white font-semibold text-lg">6</div>
             </div>
-            <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-900 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 ADDITIONAL EXPERIENCE
               </h3>
