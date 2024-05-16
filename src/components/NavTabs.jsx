@@ -10,10 +10,12 @@ const NavTabs = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-32 px-8 bg-transparent text-gray-300">
+    <nav className="fixed z-10 top-0 left-0 w-full h-32 px-8 bg-transparent text-gray-300">
       <div className="container mx-auto flex items-center justify-between h-full">
         <div>
+        <Link to="/" className={currentPage === '/' ? 'nav-link active' : 'nav-link'}>
           <img src={logo} alt="Logo Image" className="w-16 h-16 rounded-full" />
+          </Link>
         </div>
 
         {/* Desktop menu */}
