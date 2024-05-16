@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Resume() {
   return (
-    <div>
-      <div className="container  mx-auto w-full h-full">
+    <div className="mt-28">
+      <div className="container mt-5 mx-auto w-full h-full">
         <div className="relative wrap overflow-hidden p-10 h-full">
           <div
             className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"

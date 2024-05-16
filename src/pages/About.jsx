@@ -1,7 +1,7 @@
 import pic from '../assets/images/pp1.jpeg';
 import about_bg from '../assets/images/about-bg.jpg';
 
-//? source https://tailwindcomponents.com/component/profile
+// source https://tailwindcomponents.com/component/profile
 export default function About() {
   return (
     <div>
@@ -26,7 +26,7 @@ export default function About() {
               <h2 class="text-gray-800 text-3xl font-bold">Bryan Peens</h2>
               <a
                 class="text-gray-400 mt-2 hover:text-blue-500"
-                href="https://www.instagram.com/immohitdhiman/"
+                href="https://github.com/BryanPeens"
                 target="BLANK()"
               >
                 @BryanPeens
