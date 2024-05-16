@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/Card"; // Assuming you have a Card component
+import Card from "../components/Card";
 
 import banana from "../assets/images/Banana.png";
 import threeShirt from "../assets/images/threeShirt.png";
@@ -10,7 +10,10 @@ import spacetagram from "../assets/images/spacetagram.png";
 
 const Work = () => {
   return (
-    <div name="work" className="w-full min-h-screen text-gray-300 py-20 md:py-40">
+    <div
+      name="work"
+      className="w-full min-h-screen text-gray-300 py-20 md:py-40"
+    >
       <div className="max-w-[1000px] mx-auto p-4">
         <div className="pb-4">
           <p className="text-3xl md:text-4xl lg:text-5xl font-bold inline border-b-4 border-red-800 text-center">

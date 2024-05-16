@@ -1,6 +1,4 @@
 import React from "react";
-import image from "../assets/images/pp1.jpeg";
-import Skills from "../components/skills";
 import Hero from "../components/Hero";
 
 export default function Home() {
