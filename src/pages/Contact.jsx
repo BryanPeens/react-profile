@@ -107,7 +107,7 @@ export default function Contact() {
             className="text-white border-2 px-6 py-3 my-3 mx-auto hover:bg-blue-700 hover:border-blue-500 flex items-center"
             disabled={loading}
           >
-            Lets Collaborate
+            Leave Your Thoughts!
           </button>
         </form>
       </div>
