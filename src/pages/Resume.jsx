@@ -16,8 +16,8 @@ export default function Resume() {
               <div className="mx-auto font-semibold text-lg text-white">1</div>
             </div>
             <div className="order-1 bg-blue-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-800 text-xl">PROFILE</h3>
-              <p className="text-sm leading-snug tracking-wide text-gray-900 opacity-100">
+              <h3 className="mb-3 font-bold text-white text-xl">PROFILE</h3>
+              <p className="text-sm leading-snug tracking-wide text-white opacity-100">
                 Enthusiastic front-end developer with a strong work ethic and
                 dedication to continuous learning. Committed to delivering
                 exceptional user experiences and staying updated with the latest
@@ -55,10 +55,10 @@ export default function Resume() {
               <div className="mx-auto font-semibold text-lg text-white">3</div>
             </div>
             <div className="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-800 text-xl">
+              <h3 className="mb-3 font-bold text-white text-xl">
                 Junior Software Engineer EPI-USE Advance, Pretoria 2021-2022
               </h3>
-              <p className="text-sm leading-snug tracking-wide text-gray-900 opacity-100">
+              <p className="text-sm leading-snug tracking-wide text-white opacity-100">
                 * Built backend API integrations for ATS systems <br />
                 * Built SAP SuccessFactors connector for ICIMS ATS <br />
                 * Mapped SuccessFactors API fields using the Cloud Elements API
@@ -107,10 +107,10 @@ export default function Resume() {
               <div className="mx-auto font-semibold text-lg text-white">5</div>
             </div>
             <div className="order-1 bg-blue-800 rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-gray-800 text-xl">
+              <h3 className="mb-3 font-bold text-white text-xl">
                 Technologies I Know
               </h3>
-              <p className="text-sm leading-snug tracking-wide text-gray-900 opacity-100">
+              <p className="text-sm leading-snug tracking-wide text-white opacity-100">
                 <div class="container">
                   <div class="row">
                     <div class="col-sm">

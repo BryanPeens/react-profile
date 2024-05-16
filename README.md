@@ -1,8 +1,36 @@
-# React + Vite
+# React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This repository hosts my developer portfolio website, meticulously crafted using React. It serves as a comprehensive showcase of my projects, expertise, and experiences in the dynamic realm of web development.
 
-Currently, two official plugins are available:
+![screenshot](../react-profile/src/assets/images/Screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Links
+* [Live Portfolio](https://bryan-dev-portfolio.netlify.app)
+* [GitHub Repository](https://github.com/BryanPeens/react-profile)
+
+## Technologies Used
+* React
+* HTML
+* CSS
+* JavaScript
+
+## Features
+* Responsive design
+* Project showcase
+* Skills and experiences display
+* Contact information section
+
+## Installation
+1. Clone the repository
+2. Navigate to the project directory
+3. Install dependencies:
+````
+npm install
+````
+4. Run the development server:
+````
+npm start
+````
+
+
