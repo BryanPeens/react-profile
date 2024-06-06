@@ -6,16 +6,16 @@ export default function Resume() {
       <div className="container mt-5 mx-auto w-full h-full">
         <div className="relative wrap overflow-hidden p-10 h-full">
           <div
-            className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+            className="hidden lg:block border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
             style={{ left: "50%" }}
           ></div>
 
-          <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
+          <div className="mb-8 flex flex-col lg:flex-row justify-between items-center w-full lg:right-timeline">
+            <div className="order-1 w-full lg:w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto font-semibold text-lg text-white">1</div>
             </div>
-            <div className="order-1 bg-blue-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-400 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">PROFILE</h3>
               <p className="text-sm leading-snug tracking-wide text-white opacity-100">
                 Enthusiastic front-end developer with a strong work ethic and
@@ -28,14 +28,13 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
+          <div className="mb-8 flex flex-col lg:flex-row-reverse justify-between items-center w-full lg:left-timeline">
+            <div className="order-1 w-full lg:w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto text-white font-semibold text-lg">2</div>
             </div>
-            <div className="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-500 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">HIGHLIGHTS</h3>
-
               <p className="text-sm font-medium leading-snug tracking-wide text-white opacity-100">
                 * Strong organization and time management skills to meet project
                 deadlines
@@ -49,12 +48,12 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
+          <div className="mb-8 flex flex-col lg:flex-row justify-between items-center w-full lg:right-timeline">
+            <div className="order-1 w-full lg:w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto font-semibold text-lg text-white">3</div>
             </div>
-            <div className="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-600 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 Junior Software Engineer EPI-USE Advance, Pretoria 2021-2022
               </h3>
@@ -75,12 +74,12 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
+          <div className="mb-8 flex flex-col lg:flex-row-reverse justify-between items-center w-full lg:left-timeline">
+            <div className="order-1 w-full lg:w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto text-white font-semibold text-lg">4</div>
             </div>
-            <div className="order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-700 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 Software Developer Eclipse Technologies, Alberton 2019-2020
               </h3>
@@ -101,19 +100,19 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
+          <div className="mb-8 flex flex-col lg:flex-row justify-between items-center w-full lg:right-timeline">
+            <div className="order-1 w-full lg:w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto font-semibold text-lg text-white">5</div>
             </div>
-            <div className="order-1 bg-blue-800 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-800 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 Technologies I Know
               </h3>
               <p className="text-sm leading-snug tracking-wide text-white opacity-100">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-sm">
                       ReactJs, NextJs
                       <br />
                       JavaScript
@@ -125,7 +124,7 @@ export default function Resume() {
                       Bootstrap
                       <br />
                     </div>
-                    <div class="col-sm">
+                    <div className="col-sm">
                       Java
                       <br />
                       C#
@@ -135,7 +134,7 @@ export default function Resume() {
                       Ruby on Rails
                       <br />
                     </div>
-                    <div class="col-sm">
+                    <div className="col-sm">
                       MongoDB
                       <br />
                       PostgreSQL
@@ -145,7 +144,7 @@ export default function Resume() {
                       SQL
                       <br />
                     </div>
-                    <div class="col-sm">
+                    <div className="col-sm">
                       Render
                       <br />
                       Netlify
@@ -161,19 +160,19 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
+          <div className="mb-8 flex flex-col lg:flex-row-reverse justify-between items-center w-full lg:left-timeline">
+            <div className="order-1 w-full lg:w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
               <div className="mx-auto text-white font-semibold text-lg">6</div>
             </div>
-            <div className="order-1 bg-blue-900 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-blue-900 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 ADDITIONAL EXPERIENCE
               </h3>
               <p className="text-sm font-medium leading-snug tracking-wide text-white opacity-100">
-                <div class="container">
-                  <div class="row">
-                    <div class="">
+                <div className="container">
+                  <div className="row">
+                    <div className="">
                       Customer Service Coordinator, CHEP, Rosslyn 2013-2015
                       <br />
                       Area Team Leader, Schnellecke Logistics Services SA,
