@@ -15,8 +15,8 @@ const Hero = () => {
           <h1 className="py-3 text-6xl md:text-7xl font-bold text-zinc-500 text-center">
             Bryan Peens
           </h1>
-          <h1 className="text-4xl md:text-7xl font-bold text-zinc-500">
-            React Developer
+          <h1 className="text-4xl md:text-6xl font-bold text-zinc-500">
+            Fullstack Developer
           </h1>
           <Skills />
         </div>
