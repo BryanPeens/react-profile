@@ -1,23 +1,29 @@
-import React from "react";
+import React from 'react';
 
 const Card = ({ title, image, demoLink, codeLink }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={image} alt={title} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-      </div>
-      <div className="px-6 py-4">
-        <a href={demoLink} target="_blank" rel="noopener noreferrer">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <div className="bg-blue-950 rounded-md shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <div className="p-4">
+        <h3 className="text-2xl font-bold mb-4">{title}</h3>
+        <div className="flex justify-between space-x-4">
+          <a 
+            href={demoLink} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-colors duration-300"
+          >
             Demo
-          </button>
-        </a>
-        <a href={codeLink} target="_blank" rel="noopener noreferrer">
-          <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+          </a>
+          <a 
+            href={codeLink} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-gray-400 text-white py-2 px-4 rounded hover:bg-gray-600 transition-colors duration-300"
+          >
             Code
-          </button>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   );

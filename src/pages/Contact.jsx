@@ -28,7 +28,7 @@ export default function Contact() {
     formData.append("phone", phone);
     formData.append("message", message);
 
-    fetch("https://getform.io/f/1785a9e0-97b5-419f-aac8-bce32400c34b", {
+    fetch("https://getform.io/f/zbzkxdga", {
       method: "POST",
       body: formData,
     })
