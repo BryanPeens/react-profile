@@ -1,195 +1,119 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import resumePdf from '../resumefile/BRYAN_PEENS_Resume_2026-10-12.pdf';
+
+const experience = [
+  {
+    role: 'Overnight Associate',
+    company: 'Walmart',
+    place: 'Ontario',
+    dates: 'Dec 2022 — 2023',
+    details: [
+      'Operated pallet jacks and forklifts to move products efficiently.',
+      'Scanned incoming orders and placed products in designated locations.',
+      'Organized inventory and stocked shelves to maintain store cleanliness and product availability.',
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    company: 'EPI-USE',
+    place: 'Ontario',
+    dates: 'Dec 2020 — Jul 2022',
+    details: [
+      'Built backend API integrations for applicant tracking systems, including SAP SuccessFactors for iCIMS ATS.',
+      'Used Cloud Elements and JavaScript formulas for field mapping and orchestration; developed custom transformations.',
+      'Developed web and desktop applications, including responsive interfaces and mobile UI integrations through APIs.',
+      'Created technical documentation, tested software, reviewed code, troubleshot issues, and provided application support.',
+    ],
+  },
+  {
+    role: 'Software Developer',
+    company: 'Eclipse Technologies CC',
+    place: 'South Africa',
+    dates: 'Dec 2018 — Nov 2020',
+    details: [
+      'Developed and maintained web and desktop applications with a focus on UI and UX.',
+      'Researched and developed responsive interfaces for desktop applications using APIs.',
+      'Collaborated across teams on project requirements, Agile sprints, and continuous integration; contributed code reviews and support.',
+    ],
+  },
+  {
+    role: 'Customer Service Logistics Co-Ordinator',
+    company: 'CHEP',
+    place: 'South Africa',
+    dates: 'Dec 2012 — Nov 2015',
+    details: [
+      'Managed warehouse and off-site stock levels, supplier stock audits, and shipment logistics.',
+      'Supervised onsite team operations and quality control for incoming parcels and RFID infrastructure setup.',
+      'Participated in KPI meetings and customer feedback sessions to identify improvements.',
+    ],
+  },
+  {
+    role: 'Production Team Leader',
+    company: 'Schnellecke Logistics · Ford Assembly Plant',
+    place: 'South Africa',
+    dates: 'Dec 2010 — Nov 2012',
+    details: [
+      'Led a small team supplying assembly-line components and maintaining timely delivery.',
+      'Used pick-to-light systems for accurate order fulfillment and performed quality inspections on incoming parts and parcels.',
+      'Managed warehouse receiving operations and inspected incoming parcel quality.',
+    ],
+  },
+];
+
+const skills = [
+  'Software & Web Engineering',
+  'API Development',
+  'Software Testing',
+  'Quality Control',
+  'Inventory Management',
+  'Warehousing & Production',
+  'Forklift Operation',
+  'Preventive Auto Maintenance',
+  'Lawn & Grounds Maintenance',
+  'Building & Construction Labour',
+  'Basic Electrical Knowledge',
+  'Mechanical Aptitude',
+  'Effective Communication',
+];
 
 export default function Resume() {
   return (
-    <div className="mt-28">
-      <div className="container mt-5 mx-auto w-full h-full">
-        <div className="relative wrap overflow-hidden p-10 h-full">
-          <div
-            className="hidden lg:block border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
-            style={{ left: "50%" }}
-          ></div>
-
-          <div className="mb-8 flex flex-col lg:flex-row justify-between items-center w-full lg:right-timeline">
-            <div className="order-1 w-full lg:w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <div className="mx-auto font-semibold text-lg text-white">1</div>
-            </div>
-            <div className="order-1 bg-blue-400 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white text-xl">PROFILE</h3>
-              <p className="text-sm leading-snug tracking-wide text-white opacity-100">
-                Enthusiastic front-end developer with a strong work ethic and
-                dedication to continuous learning. Committed to delivering
-                exceptional user experiences and staying updated with the latest
-                front-end technologies. Adaptable and positive team player
-                focused on high-quality work and fostering collaboration, I’m
-                new to Canada and looking to expand my skill set.
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8 flex flex-col lg:flex-row-reverse justify-between items-center w-full lg:left-timeline">
-            <div className="order-1 w-full lg:w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <div className="mx-auto text-white font-semibold text-lg">2</div>
-            </div>
-            <div className="order-1 bg-blue-500 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white text-xl">HIGHLIGHTS</h3>
-              <p className="text-sm font-medium leading-snug tracking-wide text-white opacity-100">
-                * Strong organization and time management skills to meet project
-                deadlines
-                <br />
-                * Able to work in a fast-paced environment
-                <br />
-                * Strong interpersonal
-                <br />
-                * Strong communication skills <br />
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8 flex flex-col lg:flex-row justify-between items-center w-full lg:right-timeline">
-            <div className="order-1 w-full lg:w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <div className="mx-auto font-semibold text-lg text-white">3</div>
-            </div>
-            <div className="order-1 bg-blue-600 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white text-xl">
-                Junior Software Engineer EPI-USE Advance, Pretoria 2021-2022
-              </h3>
-              <p className="text-sm leading-snug tracking-wide text-white opacity-100">
-                * Built backend API integrations for ATS systems <br />
-                * Built SAP SuccessFactors connector for ICIMS ATS <br />
-                * Mapped SuccessFactors API fields using the Cloud Elements API
-                integration tool and Virtual Data Resources <br />
-                * Used Cloud Elements JavaScript formulas for integration with
-                API connectors <br />
-                * Configured mappings (VDRs) and orchestration (Formulas) within
-                Cloud Elements <br />
-                * Developed custom transformations in JavaScript <br />
-                * Created documentation including mapping documents and
-                integration design documentation <br />
-                * Conducted testing activities <br />
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8 flex flex-col lg:flex-row-reverse justify-between items-center w-full lg:left-timeline">
-            <div className="order-1 w-full lg:w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <div className="mx-auto text-white font-semibold text-lg">4</div>
-            </div>
-            <div className="order-1 bg-blue-700 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white text-xl">
-                Software Developer Eclipse Technologies, Alberton 2019-2020
-              </h3>
-              <p className="text-sm font-medium leading-snug tracking-wide text-white opacity-100">
-                * Development and operations of web and desktop applications
-                with a focus on UI and UX
-                <br />
-                * Researching and developing mobile UI for existing desktop
-                applications via API's
-                <br />
-                * Participating in sound software development processes
-                <br />
-                * Conducting peer code reviews
-                <br />
-                * Assisting with support tickets
-                <br />
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8 flex flex-col lg:flex-row justify-between items-center w-full lg:right-timeline">
-            <div className="order-1 w-full lg:w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <div className="mx-auto font-semibold text-lg text-white">5</div>
-            </div>
-            <div className="order-1 bg-blue-800 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white text-xl">
-                Technologies I Know
-              </h3>
-              <p className="text-sm leading-snug tracking-wide text-white opacity-100">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-sm">
-                      ReactJs, NextJs
-                      <br />
-                      JavaScript
-                      <br />
-                      TailwindCss
-                      <br />
-                      HTML / CSS
-                      <br />
-                      Bootstrap
-                      <br />
-                    </div>
-                    <div className="col-sm">
-                      Java
-                      <br />
-                      C#
-                      <br />
-                      PHP
-                      <br />
-                      Ruby on Rails
-                      <br />
-                    </div>
-                    <div className="col-sm">
-                      MongoDB
-                      <br />
-                      PostgreSQL
-                      <br />
-                      MySQL
-                      <br />
-                      SQL
-                      <br />
-                    </div>
-                    <div className="col-sm">
-                      Render
-                      <br />
-                      Netlify
-                      <br />
-                      Git
-                      <br />
-                      Cloud Elements
-                      <br />
-                    </div>
-                  </div>
-                </div>
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8 flex flex-col lg:flex-row-reverse justify-between items-center w-full lg:left-timeline">
-            <div className="order-1 w-full lg:w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <div className="mx-auto text-white font-semibold text-lg">6</div>
-            </div>
-            <div className="order-1 bg-blue-900 rounded-lg shadow-xl w-full lg:w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white text-xl">
-                ADDITIONAL EXPERIENCE
-              </h3>
-              <p className="text-sm font-medium leading-snug tracking-wide text-white opacity-100">
-                <div className="container">
-                  <div className="row">
-                    <div className="">
-                      Customer Service Coordinator, CHEP, Rosslyn 2013-2015
-                      <br />
-                      Area Team Leader, Schnellecke Logistics Services SA,
-                      2011-2012
-                      <br />
-                      Diploma in Information Technology, Belgium Campus
-                      ITVersity, 2016-2019
-                      <br />
-                      Graduated Highschool, Akasia High, 2010
-                    </div>
-                  </div>
-                </div>
-              </p>
-            </div>
+    <>
+      <section className="page-intro">
+        <div className="page-wrap">
+          <span className="eyebrow">Resume · Bryan Peens</span>
+          <h1 className="display-title">A hands-on background in <span>technology and operations.</span></h1>
+          <p>Experience across software development, logistics, warehousing, and production, supported by technical training and a practical, team-focused approach.</p>
+          <a className="button-secondary" href={resumePdf} download="Bryan-Peens-Resume.pdf">Download resume PDF <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+      <section className="resume-content page-wrap">
+        <div className="resume-layout">
+          <aside className="resume-aside">
+            <h2>Summary</h2>
+            <p>Hardworking and reliable, with experience in maintenance, repairs, web development, and warehousing. Enjoys learning new skills, solving problems, and working with others. Takes pride in doing a good job and being someone others can count on.</p>
+            <div className="skills-strip">{skills.map((skill) => <span className="skill-chip" key={skill}>{skill}</span>)}</div>
+            <div className="contact-detail"><span>Phone</span><a href="tel:+16132957781">613 295 7781</a></div>
+            <div className="contact-detail"><span>Email</span><a href="mailto:peensbryan75@gmail.com">peensbryan75@gmail.com</a></div>
+            <div className="contact-detail"><span>Location</span><strong>Spencerville, ON K0E 1X0</strong></div>
+            <div className="contact-detail"><span>Additional</span><strong>Valid Ontario driver’s license · Reliable transportation</strong></div>
+            <Link className="button-primary" to="/Contact">Contact Bryan <span aria-hidden="true">↗</span></Link>
+          </aside>
+          <div>
+            <section className="resume-group">
+              <h2>Professional experience</h2>
+              {experience.map((item) => <article className="resume-entry" key={item.role}><h3>{item.role}</h3><div className="resume-meta">{item.company} · {item.place} · {item.dates}</div><ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul></article>)}
+            </section>
+            <section className="resume-group">
+              <h2>Education</h2>
+              <article className="resume-entry"><h3>Software Engineering · Coding Boot Camp</h3><div className="resume-meta">University of Toronto, School of Continuing Studies · Jun 2024 · Ontario</div></article>
+              <article className="resume-entry"><h3>Diploma in Information Technology</h3><div className="resume-meta">Belgium Campus ITversity · Dec 2019 · South Africa</div></article>
+              <article className="resume-entry"><h3>Matric · Grade 12</h3><div className="resume-meta">High School Akasia · Dec 2010 · South Africa</div></article>
+            </section>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

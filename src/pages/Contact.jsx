@@ -1,116 +1,58 @@
-// The contact form uses a headless form backend to easily integrate forms
-// source - https://getform.io
-
-import React, { useState } from "react";
-import "../assets/contact_styles.css";
+import React, { useState } from 'react';
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+  const [status, setStatus] = useState('idle');
 
-  const handleChange = (e, setter) => {
-    setter(e.target.value);
+  const handleChange = (event) => {
+    setForm((current) => ({ ...current, [event.target.name]: event.target.value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus('loading');
+    const formData = new FormData(event.currentTarget);
 
-    setLoading(true);
-    setError(false);
-
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("phone", phone);
-    formData.append("message", message);
-
-    fetch("https://getform.io/f/zbzkxdga", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
-          setName("");
-          setEmail("");
-          setPhone("");
-          setMessage("");
-          setLoading(false);
-        } else {
-          throw new Error("Network response was not ok.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error submitting form:", error);
-        setLoading(false);
-        setError(true);
-      });
+    try {
+      const response = await fetch('https://getform.io/f/zbzkxdga', { method: 'POST', body: formData });
+      if (!response.ok) throw new Error('Message could not be sent.');
+      setForm({ name: '', email: '', phone: '', message: '' });
+      setStatus('success');
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      setStatus('error');
+    }
   };
 
   return (
-    <div name="contact" className="w-full mt-16">
-      {/* Contact form */}
-      <div className="my-8 py-8 bg-[#0a192f] flex justify-center items-center px-3 h-screen">
-        <form
-          method="POST"
-          onSubmit={handleSubmit}
-          className="flex flex-col max-w-[600px] w-full"
-        >
-          <div className="pb-3 text-center">
-            <p className="text-3xl font-bold inline text-gray-300 uppercase text-center">
-              Get in touch
-            </p>
-            <p className="text-gray-300">Simplest Way To Get In Toutch!</p>
+    <>
+      <section className="page-intro">
+        <div className="page-wrap">
+          <span className="eyebrow">Contact</span>
+          <h1 className="display-title">Have a good one? <span>Let’s talk.</span></h1>
+          <p>Tell me a little about what you’re working on. I’m always glad to connect with thoughtful people and interesting teams.</p>
+        </div>
+      </section>
+      <section className="contact-layout page-wrap">
+        <div className="contact-details">
+          <h2>Start a conversation.</h2>
+          <p>For roles, collaborations, or a quick hello, send a note and I’ll get back to you.</p>
+          <div className="contact-detail"><span>LinkedIn</span><a href="https://www.linkedin.com/in/bryan-peens-558113204/" target="_blank" rel="noreferrer">Connect with Bryan ↗</a></div>
+          <div className="contact-detail"><span>GitHub</span><a href="https://github.com/BryanPeens" target="_blank" rel="noreferrer">github.com/BryanPeens ↗</a></div>
+          <div className="contact-detail"><span>Based in</span><strong>Canada</strong></div>
+        </div>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-row">
+            <div className="form-field"><label htmlFor="name">Your name</label><input id="name" name="name" autoComplete="name" value={form.name} onChange={handleChange} required /></div>
+            <div className="form-field"><label htmlFor="email">Email address</label><input id="email" name="email" type="email" autoComplete="email" value={form.email} onChange={handleChange} required /></div>
           </div>
-          <input
-            className="bg-[#ccd6f6] p-2 text-gray-700"
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={name}
-            onChange={(e) => handleChange(e, setName)}
-            required={true}
-          />
-          <input
-            className="mt-2 p-2 bg-[#ccd6f6] text-gray-700"
-            type="email"
-            placeholder="Email"
-            name="email"
-            value={email}
-            onChange={(e) => handleChange(e, setEmail)}
-            required={true}
-          />
-          <input
-            type="tel"
-            className="mt-2 p-2 bg-[#ccd6f6] text-gray-700"
-            name="phone"
-            placeholder="Phone"
-            value={phone}
-            onChange={(e) => handleChange(e, setPhone)}
-            required={true}
-            minLength={10}
-            maxLength={10}
-          />
-          <textarea
-            className="bg-[#ccd6f6] mt-2 p-2 text-gray-700"
-            name="message"
-            rows="4"
-            placeholder="Message"
-            value={message}
-            onChange={(e) => handleChange(e, setMessage)}
-            required={true}
-          ></textarea>
-          <button
-            className="text-white border-2 px-6 py-3 my-3 mx-auto hover:bg-blue-700 hover:border-blue-500 flex items-center"
-            disabled={loading}
-          >
-            Leave Your Thoughts!
-          </button>
+          <div className="form-field"><label htmlFor="phone">Phone <span>(optional)</span></label><input id="phone" name="phone" type="tel" autoComplete="tel" value={form.phone} onChange={handleChange} /></div>
+          <div className="form-field"><label htmlFor="message">Message</label><textarea id="message" name="message" value={form.message} onChange={handleChange} required /></div>
+          <button className="button-primary" type="submit" disabled={status === 'loading'}>{status === 'loading' ? 'Sending…' : 'Send message'} <span aria-hidden="true">↗</span></button>
+          {status === 'success' && <p className="form-status" role="status">Thanks for reaching out. Your message has been sent.</p>}
+          {status === 'error' && <p className="form-status error" role="alert">Your message could not be sent right now. Please try again or email me directly.</p>}
         </form>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

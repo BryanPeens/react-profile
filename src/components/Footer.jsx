@@ -1,24 +1,17 @@
 import React from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { FaLinkedin, FaGithub, FaStackOverflow } from 'react-icons/fa';
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className='w-full mt-24 bg-slate-900 text-gray-300 py-8 px-2'>
-
-
-        <div className='flex flex-col max-w-[1024px] px-2 py-4 m-auto justify-between sm:flex-row text-center text-gray-500'>
-            <p className='py-4'>React Is Awesome!</p>
-            <div className='flex justify-between sm:w-[300px] pt-4 text-2xl'>
-                <a href='https://www.linkedin.com/in/bryan-peens-558113204/' target="_blank"><FaLinkedin/></a>
-                <a href='https://github.com/BryanPeens' target="_blank"><FaGithub/></a>
-                <a href='https://stackoverflow.com/' target="_blank"><FaStackOverflow/></a>
-            </div>
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <span>© {new Date().getFullYear()} Bryan Peens</span>
+        <span className="footer-note">Designed & built with care.</span>
+        <div className="footer-socials">
+          <a href="https://github.com/BryanPeens" target="_blank" rel="noopener noreferrer" aria-label="Bryan Peens on GitHub"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/bryan-peens-558113204/" target="_blank" rel="noopener noreferrer" aria-label="Bryan Peens on LinkedIn"><FaLinkedin /></a>
         </div>
-
-
-    </div>
-  )
+      </div>
+    </footer>
+  );
 }
-
-export default Footer
